@@ -1,0 +1,5 @@
+vmlinux
+Cargo.lock
+target/
+kernel.asm
+System.map

@@ -1,0 +1,17 @@
+RISC-V OS in Rust
+---
+
+Zhiyuan Pan, Zhejiang University
+
+Current features:
+- OS boot
+- Console output
+- Trap handler:
+    - Timer interrupt
+
+TODO:
+- Write design documentations in `doc/` folder
+- Write driver for `virtio-gpu-device`
+- Kernel memory alloc, virtual memory mapping
+- User space programs, task scheduling
+- To be continued...
