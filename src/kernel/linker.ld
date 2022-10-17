@@ -11,6 +11,7 @@ SECTIONS
     .text : ALIGN(0x1000){
         _stext = .;
 
+        *(.text.init)
         *(.text.entry)
         *(.text .text.*)
         
@@ -37,6 +38,10 @@ SECTIONS
         _sbss = .;
 
         *(.bss.stack)
+
+        boot_stack = ALIGN(0x1000);
+        boot_stack_top = boot_stack + 0x1000;
+
         *(.sbss .sbss.*)
         *(.bss .bss.*)
         

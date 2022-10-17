@@ -1,5 +1,3 @@
-.extern trap_handler
-
     .section .text.entry
     .globl _traps
 

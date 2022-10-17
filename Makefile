@@ -8,7 +8,7 @@ all: $(DEPS)
 	nm vmlinux > System.map
 
 run: all
-	qemu-system-riscv64 -nographic -machine virt -kernel vmlinux -bios default
+	qemu-system-riscv64 -serial mon:stdio -nographic -machine virt -kernel vmlinux -bios default
 
 clean:
 	rm -f kernel.asm System.map vmlinux

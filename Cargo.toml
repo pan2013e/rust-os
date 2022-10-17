@@ -10,3 +10,5 @@ panic = "abort"
 panic = "abort"
 
 [dependencies]
+virtio-drivers = "0.1.0"
+buddy_system_allocator = "0.8.0"

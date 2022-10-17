@@ -5,12 +5,23 @@ use core::arch::asm;
 #[allow(dead_code)]
 pub const SBI_SET_TIMER: i32 = 0x0;
 pub const SBI_PUTCHAR  : i32 = 0x1;
+pub const SBI_GETCHAR  : i32 = 0x2;
 pub const SBI_SHUTDOWN : i32 = 0x8;
 
 #[allow(dead_code)]
 pub struct SbiRet {
     error : i64,
     value : i64
+}
+
+impl SbiRet {
+    pub fn get_error(&self) -> i64 {
+        return self.error;
+    }
+
+    pub fn get_value(&self) -> i64 {
+        return self.value;
+    }
 }
 
 #[inline(always)]
